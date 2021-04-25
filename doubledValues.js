@@ -181,13 +181,85 @@
 
 // Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.
 
-// const find = function (arr, val) {
+// // const find = function (arr, val) {
+
+// //     return arr.filter(function (el) {
+// //         return el === val
+// //     })[0];
+
+// // }
+
+// // console.log(find([1, 2, 3, 4, 5], 3)) // 3
+// // console.log(find([1, 2, 3, 4, 5], 10)) // undefined
+
+
+
+// // Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.
+
+// const findInObj = function (arr, key, value) {
 
 //     return arr.filter(function (el) {
-//         return el === val
-//     })[0];
+//         return el[key] === value;
+//     })
+// }
+
+// findInObj(
+//     [
+//         { first: 'Elie', last: "Schoppik" },
+//         { first: 'Tim', last: "Garcia", isCatOwner: true },
+//         { first: 'att', last: "Lane" },
+//         { first: 'Colt', last: "Steele", isCatOwner: true }
+//     ],
+//     'isCatOwner',
+
+
+// Write a function called removeVowels which accepts a string and returns a new string with all of the vowels(both uppercased and lowercased) removed.Every character in the new string should be lowercased.
+
+// const removeVowels = function (str) {
+
+//     let newStr = str.split("");
+
+//     let vowels = 'aeiouAEIOU'
+
+//     let noVowels = [];
+
+//     for (let i = 0; i < newStr.length; i++) {
+//         let char = newStr[i];
+
+//         if (!vowels.includes(char)) {
+//             noVowels.push(char.toLowerCase())
+
+
+
+//         }
+
+
+
+//     }
+//     return noVowels;
+
 
 // }
 
-// console.log(find([1, 2, 3, 4, 5], 3)) // 3
-// console.log(find([1, 2, 3, 4, 5], 10)) // undefined
+
+// console.log(removeVowels('Elie')) // ('l')
+// console.log(removeVowels('TIM')) // ('tm')
+// console.log(removeVowels('ZZZZZZ')) // ('zzzzzz')
+
+
+// Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled(HINT - you can use map and fitler to double and then filter the odd numbers).
+
+const doubleOddNumbers = function (arr) {
+
+
+    return arr.filter(function (val) {
+        return val % 2 !== 0;
+    })
+        .map(function (val) {
+            return val * 2;
+        })
+}
+
+
+console.log(doubleOddNumbers([1, 2, 3, 4, 5])) // [2,6,10]
+console.log(doubleOddNumbers([4, 4, 4, 4, 4])) // []

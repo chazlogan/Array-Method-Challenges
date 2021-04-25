@@ -131,3 +131,18 @@
 
 
 // Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of “first” and the value of a key with the name of “last” in each object, concatenated together with a space.
+
+
+
+// const extractFullName = function (arr) {
+
+
+//     arr.map(function (val) {
+//         return val.first + " " + val.last;
+//     })
+
+
+// };
+
+
+Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
